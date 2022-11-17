@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>E-commerce in js</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/65a04b8d57.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-11 col-md-10 mx-auto">
+                <div class="row mt-5 gx-3">
+                    <!-- left side div  -->
+                    <div class="col-md-12 col-11 col-lg-8 mx-auto main_cart mb-lg-0 mb-5 shadow">
+                        <div class="card p-4">
+                            <h2 class="py-4 fw-bold">Card (2 items)</h2>
+                            <div class="row">
+                                <!-- card images div  -->
+                                <div
+                                    class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_img p-0">
+                                    <img src="https://i.pinimg.com/474x/1e/f5/5f/1ef55fd0873ea77e63766cc6954a77e2.jpg"
+                                        class="img-fluid p-0" alt="card img error">
+                                </div>
+                                <div class="col-md-7 col-11 mx-auto px-4 mt-2">
+                                    <div class="row">
+                                        <!-- product name  -->
+                                        <div class="col-6 car-title">
+                                            <h1 class="product_name">White Conford Shirt</h1>
+                                            <p class="mb-2">SHIRT - BLUE</p>
+                                            <p class="mb-2">COLOR: BLUE</p>
+                                            <p class="mb-3">SIZE: M</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <!-- Quntity inc dec  -->
+                                            <ul class="pagination justify-content-end set_quantity">
+                                                <li class="page-item"><button class="page-link"
+                                                        onclick="decreaseNumbe('textbox' , 'price')"><i
+                                                            class="fas fa-minus"></i>
+                                                    </button>
+                                                </li>
+                                                <li class="page-item"><input type="text" name="" class="page-link"
+                                                        value="0" id="textbox"></li>
+                                                <li class="page-item"><button class="page-link"
+                                                        onclick="increaseNumber('textbox' ,'price')"><i
+                                                            class="fas fa-plus"></i></button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- //remove  and price -->
+                                    <div class="row">
+                                        <div class="col-8 d-flex justify-content-between remove_wish">
+                                            <p><i class="fas fa-trash-alt"></i> REMOVE ITEM</p>
+                                            <p><i class="fas fa-heart"></i>MOVE TO WISH LIST </p>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-end price_money">
+                                            <h3>$<span id="price">0.00 </span></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- left second card  -->
+                        <div class="card p-4">
+                            <div class="row">
+                                <!-- card images div  -->
+                                <div
+                                    class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_img p-0">
+                                    <img src="https://i.pinimg.com/474x/1e/f5/5f/1ef55fd0873ea77e63766cc6954a77e2.jpg"
+                                        class="img-fluid p-0" alt="card img error">
+                                </div>
+                                <div class="col-md-7 col-11 mx-auto px-4 mt-2">
+                                    <div class="row">
+                                        <!-- product name  -->
+                                        <div class="col-6 car-title">
+                                            <h1 class="product_name">White Conford Shirt</h1>
+                                            <p class="mb-2">SHIRT - BLUE</p>
+                                            <p class="mb-2">COLOR: BLUE</p>
+                                            <p class="mb-3">SIZE: M</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <!-- Quntity inc dec  -->
+                                            <ul class="pagination justify-content-end set_quantity">
+                                                <li class="page-item"><button class="page-link"
+                                                        onclick="decreaseNumbe('textbox1' , 'price1')"><i
+                                                            class="fas fa-minus"></i>
+                                                    </button>
+                                                </li>
+                                                <li class="page-item"><input type="text" name="" class="page-link"
+                                                        value="0" id="textbox1"></li>
+                                                <li class="page-item"><button class="page-link"
+                                                        onclick="increaseNumber('textbox1' , 'price1')"><i
+                                                            class="fas fa-plus"></i></button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- //remover move and price -->
+                                    <div class="row">
+                                        <div class="col-8 d-flex justify-content-between remove_wish">
+                                            <p><i class="fas fa-trash-alt"></i> REMOVE ITEM</p>
+                                            <p><i class="fas fa-heart"></i>MOVE TO WISH LIST </p>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-end price_money">
+                                            <h3>$<span id="price1">0.00 </span></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- right side div  -->
+                    <div class="col-md-12 col-lg-4 col-11 mx-auto mt-lg-0 mt-md-5">
+                        <div class="right_side p-3 shadow bg-white">
+                            <h2 class="product_name mb-5">The Total Amount Of</h2>
+
+                            <div class="price_indiv d-flex justify-content-between">
+                                <p>Product amount</p>
+                                <p>$<span id="product_total_amt">0.00</span></p>
+                            </div>
+                            <div class="price_indiv d-flex justify-content-between">
+                                <p>Shipping Charge</p>
+                                <p>$<span id="shipping_charge">50.0</span></p>
+                            </div>
+                            <hr />
+                            <div class="total-amt d-flex justify-content-between fw-bold">
+                                <p>The total amount of (including VAT)</p>
+                                <p>$<span id="total_cart_amt">0.00</span></p>
+                            </div>
+                            <button class="btn btn-primary text-uppercase">Checkout</button>
+                        </div>
+                        <!-- dicount part  -->
+
+                        <div class="discount_code mt-3 shadow ">
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <a class="accordion-button collapsed d-flex justify-content-between"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                            aria-expanded="false" aria-controls="flush-collapseOne">
+                                            Add a discount code (optional)
+
+                                        </a>
+                                    </h2>
+                                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <input type="text" name="" id="discount_code1" class="form-control fw-bold"
+                                                placeholder="Enter the discount code">
+                                            <small id="error_trw" class=" mt-3">code is 9211</small> <br>
+                                            <button class="btn btn-primary btn-sm mt-3 "
+                                                onclick="discount_code()">Apply</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- discount end here..  -->
+                        </div>
+                        <div class="mt-3 shadow p-3 bg-white">
+                            <div class="pt-4">
+                                <h5 class="mb-4">Expected delivery date</h5>
+                                <p id="date"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+        var product_total_amt = document.getElementById("product_total_amt")
+        var shipping_charge = document.getElementById("shipping_charge")
+        var total_cart_amt = document.getElementById("total_cart_amt")
+
+        function increaseNumber(inc, amt) {
+            var itemval = document.getElementById(inc);
+            var itemPrice = document.getElementById(amt)
+            if (itemval.value >= 5) {
+                itemval.style.background = "red";
+                itemval.style.color = "#fff";
+                alert("maximum 5 Quantity allowed at a time");
+            } else {
+                itemval.value = parseInt(itemval.value) + 1;
+                itemPrice.innerHTML = parseInt(itemPrice.innerHTML) + 15;
+                product_total_amt.innerHTML = parseInt(product_total_amt.innerHTML) + 15;
+
+                total_cart_amt.innerHTML = parseInt(product_total_amt.innerHTML) + parseInt(shipping_charge.innerHTML);
+            }
+        }
+        function decreaseNumbe(dec, amt) {
+            var itemval = document.getElementById(dec)
+            var itemPrice = document.getElementById(amt)
+            console.log(amt)
+            if (itemval.value <= 0) {
+                itemval.value = 0;
+                alert("A Nagative Number are Now Allowed!");
+            } else {
+                itemval.value = parseInt(itemval.value) - 1;
+                itemval.style.background = "#fff";
+                itemval.style.color = "#000";
+                itemPrice.innerHTML = parseInt(itemPrice.innerHTML) - 15;
+                product_total_amt.innerHTML = parseInt(product_total_amt.innerHTML) - 15;
+                total_cart_amt.innerHTML = parseInt(product_total_amt.innerHTML) + parseInt(shipping_charge.innerHTML);
+            }
+        }
+        function discount_code() {
+            var code = document.getElementById("discount_code1").value
+            console.log(code)
+            if (code == 9211) {
+                total_cart_amt.innerHTML = parseInt(total_cart_amt.innerHTML) - 50
+                var error = document.getElementById("error_trw")
+                error.innerHTML = "successful!";
+                error.style.color = "green"
+
+            } else {
+                var error = document.getElementById("error_trw")
+                error.innerHTML = "Invalid code"
+                error.style.color = "red"
+            }
+        }
+        let current = new Date();
+        let orderDate = `${current.getDate()}/${current.getMonth()}/${current.getFullYear()}  -  ${current.getDate()+2}/${current.getMonth()}/${current.getFullYear()}`;
+        document.getElementById("date").innerHTML = orderDate;
+        console.log(orderDate)
+    </script>
+
+</body>
+
+</html>
